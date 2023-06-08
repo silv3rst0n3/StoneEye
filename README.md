@@ -2,20 +2,20 @@
 HI GUYS I Write Simple BASH Code For Watch bug bounty targets UPdates LIST Every 25 minutes.
 
 
-<h1>Required Tools</h1>
+<h2>Required Tools</h2>
 in This tools YOU need Anew and JQ and Notify programs
- <h1>ANEW install </h1>
+ <h2>ANEW install </h2>
  go install -v github.com/tomnomnom/anew@latest
- <h1>Jq install</h1>
+ <h2>Jq install</h2>
 sudo apt-get install jq
 
- <h1>Screen INSTALL</h1>
+ <h2>Screen INSTALL</h2>
 For Run script Every 25 minutes Most Run In Screen !
 
 sudo apt update & apt install screen
-<h1>NOTIFY:</h1>
+<h2>NOTIFY:</h2>
 go install -v github.com/projectdiscovery/notify/cmd/notify@latest
-<h1>Config</h1>
+<h3>Config:</h3>
 you most Config Notify to your telegram bot or slack or discord app for send results .
 For Discord app if you want separate RESULT of bounty programs You most Edit code and after notify use -id hackerone for send results send to hackerone Discord channel
 
