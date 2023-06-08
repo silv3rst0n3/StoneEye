@@ -37,6 +37,7 @@ Screen -r Session_Name
 <h3>Config:</h3>
 config file:
 /$HOME/.config/Notify/provider-config.yaml
+
 you most Config Notify to your telegram bot or slack or discord app for send results .
 For Discord app if you want separate RESULT of bounty programs You most Edit code and after notify use -id hackerone for send results send to hackerone Discord channel
 
