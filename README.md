@@ -13,25 +13,25 @@ For Discord app if you want separate RESULT of bounty programs You most Edit cod
 ```discord:
   - id: "hackerone"
     discord_channel: "#hackerone"
-    discord_username: "test"
+    discord_username: "StoneEye"
     discord_format: "{{data}}"
     discord_webhook_url: "DISCORD WEB HOOK"
   
   - id: "bugcrowd"
     discord_channel: "#bugcrowd"
-    discord_username: "test"
+    discord_username: "StoneEye"
     discord_format: "{{data}}"
     discord_webhook_url: "DISCORD WEB HOOK"
 
   - id: "hackenproof"
     discord_channel: "#hackenproof"
-    discord_username: "test"
+    discord_username: "StoneEye"
     discord_format: "{{data}}"
     discord_webhook_url: "DISCORD WEB HOOK"
   
   - id: "domains"
     discord_channel: "#domains"
-    discord_username: "test"
+    discord_username: "StoneEye"
     discord_format: "{{data}}"
     discord_webhook_url: "DISCORD WEB HOOK"
 
