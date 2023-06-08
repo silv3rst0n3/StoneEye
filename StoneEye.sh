@@ -82,4 +82,4 @@ cp $PWD/uphackerone.json $PWD/hackerone_data.json
 echo "Sleep time" | notify -id tel
 sleep 1500
 
-/bin/bash $PWD/silver2
+/bin/bash $PWD/StoneEye.sh
