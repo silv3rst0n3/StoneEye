@@ -20,6 +20,18 @@ sudo apt-get install jq
 For Run script Every 25 minutes Most Run In Screen !
 
 sudo apt update & apt install screen
+<h3>usage:</h3>
+
+screen -S Session_Name
+
+#SilverStone$/StoneEye/./StoneEye.sh 
+
+for deatach Press Ctrl+A+D
+
+For load Session:
+
+Screen -r Session_Name
+
 <h2>NOTIFY:</h2>
  go install -v github.com/projectdiscovery/notify/cmd/notify@latest 
 <h3>Config:</h3>
