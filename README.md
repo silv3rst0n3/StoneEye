@@ -1,7 +1,7 @@
 # StoneEYE
 HI GUYS I Write Simple BASH Code For Watch bug bounty targets UPdates LIST
 
-in This tools YOU need JQ and Notify programs 
+in This tools YOU need Anew and JQ and Notify programs 
 
 
 <h1>NOTIFY:</h1>
@@ -46,22 +46,10 @@ telegram:
     telegram_chat_id: "chatid"
     telegram_format: "{{data}}"
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ <h1>ANEW install </h1>
+ go install -v github.com/tomnomnom/anew@latest
+ <h1>Jq install</h1>
+sudo apt-get install jq
 
 
 you most Config Notify to your telegram bot or slack or discord app for send results .
