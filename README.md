@@ -7,7 +7,7 @@ in This tools YOU need Anew and JQ and Notify programs
 <h1>NOTIFY:</h1>
 go install -v github.com/projectdiscovery/notify/cmd/notify@latest
 <h1>Config</h1>
-
+you most Config Notify to your telegram bot or slack or discord app for send results .
 For Discord app if you want separate RESULT of bounty programs You most Edit code and after notify use -id hackerone for send results send to hackerone Discord channel
 
 ```discord:
@@ -51,8 +51,6 @@ telegram:
  <h1>Jq install</h1>
 sudo apt-get install jq
 
-
-you most Config Notify to your telegram bot or slack or discord app for send results .
  <h1>Screen INSTALL</h1>
 For Run script Every 25 minutes Most Run In Screen !
 
