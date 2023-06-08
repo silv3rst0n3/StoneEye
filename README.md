@@ -35,6 +35,8 @@ Screen -r Session_Name
 <h2>NOTIFY:</h2>
  go install -v github.com/projectdiscovery/notify/cmd/notify@latest 
 <h3>Config:</h3>
+config file:
+/$HOME/.config/Notify/provider-config.yaml
 you most Config Notify to your telegram bot or slack or discord app for send results .
 For Discord app if you want separate RESULT of bounty programs You most Edit code and after notify use -id hackerone for send results send to hackerone Discord channel
 
