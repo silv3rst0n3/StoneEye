@@ -8,7 +8,7 @@ in This tools YOU need JQ and Notify programs
 go install -v github.com/projectdiscovery/notify/cmd/notify@latest
 <h1>Config</h1>
 you most Config Notify to your telegram bot or slack or discord app for send results .
-For Run script Every 25 minutes Most Run In Screen !
  <h1>Screen INSTALL</h1>
+For Run script Every 25 minutes Most Run In Screen ! \n
  sudo apt update & apt install screen
 
