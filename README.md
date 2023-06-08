@@ -1,9 +1,18 @@
 # StoneEYE
-HI GUYS I Write Simple BASH Code For Watch bug bounty targets UPdates LIST
-
-in This tools YOU need Anew and JQ and Notify programs 
+HI GUYS I Write Simple BASH Code For Watch bug bounty targets UPdates LIST Every 25 minutes.
 
 
+<h1>Required Tools</h1>
+in This tools YOU need Anew and JQ and Notify programs
+ <h1>ANEW install </h1>
+ go install -v github.com/tomnomnom/anew@latest
+ <h1>Jq install</h1>
+sudo apt-get install jq
+
+ <h1>Screen INSTALL</h1>
+For Run script Every 25 minutes Most Run In Screen !
+
+sudo apt update & apt install screen
 <h1>NOTIFY:</h1>
 go install -v github.com/projectdiscovery/notify/cmd/notify@latest
 <h1>Config</h1>
@@ -46,13 +55,5 @@ telegram:
     telegram_chat_id: "chatid"
     telegram_format: "{{data}}"
 ```
- <h1>ANEW install </h1>
- go install -v github.com/tomnomnom/anew@latest
- <h1>Jq install</h1>
-sudo apt-get install jq
 
- <h1>Screen INSTALL</h1>
-For Run script Every 25 minutes Most Run In Screen !
-
-sudo apt update & apt install screen
 
