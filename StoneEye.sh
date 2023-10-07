@@ -22,8 +22,6 @@ if [ ! -f intigriti_data.json ]
 then
     wget https://raw.githubusercontent.com/Osb0rn3/bugbounty-targets/main/programs/intigriti.json
     mv $PWD/intigriti.json $PWD/intigriti_data.json
-fi
-
 # #update
 
 wget https://raw.githubusercontent.com/Osb0rn3/bugbounty-targets/main/programs/hackerone.json -O $PWD/uphackerone.json
@@ -41,37 +39,37 @@ cat hackerone_data2.json | sed 's/}/}\n/g' > hackerone_data3.json
 
 hackerone=$(cat $PWD/uphackerone3.json | anew -d $PWD/hackerone_data3.json) 
 if [ -n "$hackerone" ];then
-echo -e "$date \n #hackerone_NEW_Targets \n $hackerone" | notify -id tel -silent -bulk
+echo -e "$date \n #hackerone_NEW_Targets \n $hackerone"| tee hack.txt | notify -id tel -silent -bulk
 fi
 
 #bugcrowd
-cat upbugcrowd.json | jq '.[]| {name: .target_groups[].targets[].name, scope: .target_groups[].targets[].uri}' | sed 's/}/}\n/g' > $PWD/upbugcrowd3.json
+cat upbugcrowd.json | jq '.[]| {name: .target_groups[].targets[].name, Scope: .target_groups[].targets[].uri}' | sed 's/}/}\n/g' > $PWD/upbugcrowd3.json
 
-cat bugcrowd_data.json | jq '.[]| {name: .target_groups[].targets[].name, scope: .target_groups[].targets[].uri}' | sed 's/}/}\n/g' > $PWD/bugcrowd_data3.json
+cat bugcrowd_data.json | jq '.[]| {name: .target_groups[].targets[].name, Scope: .target_groups[].targets[].uri}' | sed 's/}/}\n/g' > $PWD/bugcrowd_data3.json
 
 bugcrowd=$(cat $PWD/upbugcrowd3.json | anew -d $PWD/bugcrowd_data3.json )
 if [ -n "$bugcrowd" ];then
-echo -e "$date \n #bugcrowd_NEW_Targets \n $bugcrowd" | notify -id tel -silent -bulk
+echo -e "$date \n #bugcrowd_NEW_Targets \n $bugcrowd" | tee bugcrowd.txt | notify -id tel -silent -bulk
 fi
 
 #intigriti
-cat upintigriti.json | jq '.[] | {Name: .name,scope: .domains[].endpoint}' | sed 's/}/}\n/g' > $PWD/upintigriti3.json
+cat upintigriti.json | jq '.[] | {Name: .name,Scope: .domains[].endpoint}' | sed 's/}/}\n/g' > $PWD/upintigriti3.json
 
-cat intigriti_data.json | jq '.[] | {Name: .name,scope: .domains[].endpoint}'| sed 's/}/}\n/g' > $PWD/intigriti_data3.json
+cat intigriti_data.json | jq '.[] | {Name: .name,Scope: .domains[].endpoint}'| sed 's/}/}\n/g' > $PWD/intigriti_data3.json
 
 intigriti=$(cat $PWD/upintigriti3.json | anew -d $PWD/intigriti_data3.json )
 if [ -n "$intigriti" ];then
-echo -e "$date \n #intigriti_NEW_Targets \n $intigriti" | notify -id tel -silent -bulk
+echo -e "$date \n #intigriti_NEW_Targets \n $intigriti" | tee intigriti.txt | notify -id tel -silent -bulk
 fi
 
 #yeswehack
-cat upyeswehack.json | jq '.[] | {name: .business_unit.name, scope: .scopes[].scope ,Type:.scopes[].scope_type}' | sed 's/}/}\n/g' > $PWD/upyeswehack3.json 
+cat upyeswehack.json | jq '.[] | {name: .business_unit.name, Scope: .scopes[].scope ,Type:.scopes[].scope_type}' | sed 's/}/}\n/g' > $PWD/upyeswehack3.json 
 
-cat yeswehack_data.json | jq '.[] | {name: .business_unit.name, scope: .scopes[].scope ,Type:.scopes[].scope_type}' | sed 's/}/}\n/g' > $PWD/yeswehack_data3.json
+cat yeswehack_data.json | jq '.[] | {name: .business_unit.name, Scope: .scopes[].scope ,Type:.scopes[].scope_type}' | sed 's/}/}\n/g' > $PWD/yeswehack_data3.json
 
 yeswehack=$(cat $PWD/upyeswehack3.json | anew -d $PWD/yeswehack_data3.json )
 if [ -n "$yeswehack" ];then
-echo -e "$date \n #yeswehack_NEW_Targets \n $yeswehack" | notify -id tel -silent -bulk
+echo -e "$date \n #yeswehack_NEW_Targets \n $yeswehack" | tee yeswehack.txt | notify -id tel -silent -bulk
 fi
 
 cp $PWD/upintigriti.json $PWD/intigriti_data.json
@@ -79,7 +77,6 @@ cp $PWD/upbugcrowd.json $PWD/bugcrowd_data.json
 cp $PWD/upyeswehack.json $PWD/yeswehack_data.json
 cp $PWD/uphackerone.json $PWD/hackerone_data.json
 
-echo "Sleep time" | notify -id tel
-sleep 1500
+sleep 6000
 
 /bin/bash $PWD/StoneEye.sh
