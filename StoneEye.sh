@@ -22,6 +22,7 @@ if [ ! -f intigriti_data.json ]
 then
     wget https://raw.githubusercontent.com/Osb0rn3/bugbounty-targets/main/programs/intigriti.json
     mv $PWD/intigriti.json $PWD/intigriti_data.json
+fi
 # #update
 
 wget https://raw.githubusercontent.com/Osb0rn3/bugbounty-targets/main/programs/hackerone.json -O $PWD/uphackerone.json
